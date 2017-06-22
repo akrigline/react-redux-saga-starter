@@ -1,7 +1,7 @@
 import React from 'react'
-import { storiesOf } from '@kadira/react-native-storybook'
+import { storiesOf } from '@storybook/react'
 import Root from './rootScene'
-storiesOf('App Scene', module)
+storiesOf('Root Scene', module)
   .add('should Render', () => (
     <Root />
   ))

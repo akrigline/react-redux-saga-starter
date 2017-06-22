@@ -1,7 +1,7 @@
 import React from 'react'
-import { storiesOf } from '@kadira/react-native-storybook'
+import { storiesOf } from '@storybook/react'
 import <%= pascalEntityName %> from './<%= camelEntityName %>Scene'
-storiesOf('App Scene', module)
+storiesOf('<%= pascalEntityName %> Scene', module)
   .add('should Render', () => (
     <<%= pascalEntityName %> />
   ))

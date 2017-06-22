@@ -1,7 +1,7 @@
 import React from 'react'
-import { storiesOf } from '@kadira/react-native-storybook'
+import { storiesOf } from '@storybook/react'
 import HomePage from './homePageScene'
-storiesOf('App Scene', module)
+storiesOf('Homepage', module)
   .add('should Render', () => (
     <HomePage />
   ))
