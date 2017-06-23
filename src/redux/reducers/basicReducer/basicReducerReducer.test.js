@@ -14,5 +14,5 @@ it('should reduce decrements', () => {
   expect(basicReducerReducer({count: 5}, actionCreators.decrement(2))).toEqual({count: 3})
 })
 it('should set the stars to whatever comes from the setStars saga', () => {
-  expect(basicReducerReducer({count: 938}, {type: actions.FETCH_STARS_SUCCESS, payload: 9999})).toEqual({count: 9999})
+  expect(basicReducerReducer({count: 938}, {type: actions.FETCH_BASIC_SUCCESS, payload: 9999})).toEqual({count: 9999})
 })

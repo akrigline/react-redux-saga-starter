@@ -4,5 +4,5 @@ import axios from 'axios'
 
 it('should call the api', () => {
   const iterator = getBasic()
-  expect(iterator.next().value).toEqual(call(axios.get, 'https://api.github.com/repos/ericwooley/react-native-redux-jest-starter-kit'))
+  expect(iterator.next().value).toEqual(call(axios.get, 'https://api.github.com/repos/akrigline/react-redux-saga-starter'))
 })
