@@ -1,0 +1,15 @@
+import React from 'react'
+import { storiesOf } from '@storybook/react'
+import { Provider } from 'react-redux'
+import createReduxStore from '../../redux/store'
+import DisplayStars from './displayStarsContainer'
+
+storiesOf('DisplayStarsContainer', module)
+  .add('with 7 stars', () => {
+    const reduxStore = createReduxStore('<%= pascalEntityName %> story store', {basicReducer: {count: 7}})
+    return (
+      <Provider store={reduxStore}>
+        <DisplayStars />
+      </Provider>
+    )
+  })

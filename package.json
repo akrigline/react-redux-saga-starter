@@ -9,6 +9,7 @@
     "react-dom": "^15.6.1",
     "react-redux": "^5.0.5",
     "react-router-dom": "^4.1.1",
+    "recompose": "^0.23.5",
     "redux": "^3.7.0",
     "redux-actions": "^2.0.3",
     "redux-devtools-extension": "^2.13.2",

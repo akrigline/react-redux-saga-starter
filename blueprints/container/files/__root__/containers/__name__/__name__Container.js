@@ -1,5 +1,7 @@
 import {connect} from 'react-redux'
-import {<%= pascalEntityName %>} from '../../components'
+// For Lifecycle composing
+// import {compose, lifecycle} from 'recompose'
+import {<%= pascalEntityName %>} from '../../components/<%= camelEntityName %>/<%= camelEntityName %>Component'
 import {actions} from '../../redux/sagas/'
 
 // Global State
@@ -10,14 +12,25 @@ export function mapStateToProps (state, props) {
 }
 // In Object form, each funciton is automatically wrapped in a dispatch
 export const propsMapping = {
-  onPress: actions.starsActions.FETCH_STARS
+  onClick: actions.starsActions.FETCH_STARS
 }
 
 // If you want to use the function mapping
 // export const propsMapping = (dispatch, ownProps) => {
 //   return {
-//     onPress: () => dispatch(actions.starsActions.FETCH_STARS)
+//     onClick: () => dispatch(actions.starsActions.FETCH_STARS)
 //   }
 // }
 
 export default connect(mapStateToProps, propsMapping)(<%= pascalEntityName %>)
+
+// export default compose(
+//   connect(mapStateToProps, propsMapping),
+//   lifecycle({
+//     componentDidMount: function() {
+//       if (this.props.fetchBasic) {
+//         this.props.fetchBasic()
+//       }
+//     }
+//   })
+// )(<%= pascalEntityName %>)
