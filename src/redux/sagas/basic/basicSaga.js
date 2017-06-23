@@ -19,7 +19,7 @@ export default function * watchBasic () {
 
 export function * getBasic (action) {
   try {
-    const repoInfo = yield call(axios.get, 'https://api.github.com/repos/ericwooley/react-native-redux-jest-starter-kit')
+    const repoInfo = yield call(axios.get, 'https://api.github.com/repos/akrigline/react-redux-saga-starter')
     yield put(actionCreators.fetchBasicSuccess(repoInfo.data.stargazers_count))
   } catch (error) {
     yield put(actionCreators.fetchBasicFailure(error))
