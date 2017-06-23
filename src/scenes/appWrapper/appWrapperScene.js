@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import logo from '../../assets/icons/logo.svg';
-import styles from './appScene.scss';
+import styles from './appWrapperScene.scss';
 
-class App extends Component {
+class AppWrapper extends Component {
   render() {
     return (
       <div className={styles.app}>
@@ -16,4 +16,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default AppWrapper;

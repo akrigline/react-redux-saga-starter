@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Provider } from 'react-redux';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 // import routes from '../../routes';
-import App from '../app/appScene';
+import AppWrapper from '../appWrapper/appWrapperScene';
 import HomePage from '../homePage/homePageScene';
 
 
@@ -13,12 +13,12 @@ export default class Root extends Component {
     return (
       <Provider store={store}>
         <BrowserRouter>
-          <App>
+          <AppWrapper>
             <Switch>
               <Route path='/' component={HomePage} />
               
             </Switch>
-          </App>
+          </AppWrapper>
         </BrowserRouter>
       </Provider>
     );

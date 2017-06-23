@@ -5,8 +5,8 @@ import createReduxStore from '../../redux/store'
 import DisplayStars from './displayStarsContainer'
 
 storiesOf('DisplayStarsContainer', module)
-  .add('with 7 stars', () => {
-    const reduxStore = createReduxStore('<%= pascalEntityName %> story store', {basicReducer: {count: 7}})
+  .add('with stars', () => {
+    const reduxStore = createReduxStore()
     return (
       <Provider store={reduxStore}>
         <DisplayStars />
