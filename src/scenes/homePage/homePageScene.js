@@ -12,9 +12,8 @@ class HomePageScene extends React.Component {
 
     )
   }
-}
+  props: {
 
-HomePageScene.propTypes = {
+  }
 }
-
 export default HomePageScene

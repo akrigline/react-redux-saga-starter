@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 import { Provider } from 'react-redux';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 // import routes from '../../routes';
@@ -23,8 +22,7 @@ export default class Root extends Component {
       </Provider>
     );
   }
+  props: {
+    store: Object
+  }
 }
-
-Root.propTypes = {
-  store: PropTypes.object.isRequired,
-};

@@ -1,14 +1,23 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 
-export default function DisplayStars (props) {
+export type Values = {
+  starCount: number
+}
+
+export type Callbacks = {
+  increment: (number) => any,
+  decrement: (number) => any,
+  fetchBasic: () => any
+}
+
+type Props = Values & Callbacks
+
+export default function DisplayStars (props: Props) {
   return (
     <div>
       <p>{props.starCount} Things!</p>
+      <button onClick={() => props.increment(4)}>Increase</button>
+      <button onClick={() => props.decrement(4)}>Increase</button>
     </div>
   )
-}
-
-DisplayStars.propTypes = {
-  starCount: PropTypes.number
 }

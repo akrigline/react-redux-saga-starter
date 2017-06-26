@@ -1,18 +1,20 @@
 import {connect} from 'react-redux'
 // For Lifecycle composing
 // import {compose, lifecycle} from 'recompose'
-import {<%= pascalEntityName %>} from '../../components/<%= camelEntityName %>/<%= camelEntityName %>Component'
-import {actions} from '../../redux/sagas/'
+import <%= pascalEntityName %>, {Values, Callbacks} from '../../components/<%= camelEntityName %>/<%= camelEntityName %>Component'
+import {State} from '../../redux/reducers/'
+import {actions as sagaActions} from '../../redux/sagas/'
+import {actionCreators} from '../../redux/reducers/basicReducer/basicReducerReducer'
 
 // Global State
-export function mapStateToProps (state, props) {
+export function mapStateToProps (state: State, props): Values {
   return {
     starCount: state.counter.count
   }
 }
 // In Object form, each funciton is automatically wrapped in a dispatch
-export const propsMapping = {
-  onClick: actions.starsActions.FETCH_STARS
+export const propsMapping: Callbacks = {
+  onClick: sagaActions.starsActions.FETCH_STARS
 }
 
 // If you want to use the function mapping

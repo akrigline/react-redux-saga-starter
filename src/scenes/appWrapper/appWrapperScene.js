@@ -14,6 +14,10 @@ class AppWrapper extends Component {
       </div>
     );
   }
+
+  props: {
+    children: any
+  }
 }
 
 export default AppWrapper;

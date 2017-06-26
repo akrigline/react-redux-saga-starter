@@ -1,6 +1,11 @@
+// @flow
 import React from 'react'
 
 class <%= pascalEntityName %>Scene extends React.Component {
+  props: {
+
+  }
+
   render () {
     return (
       
@@ -10,9 +15,6 @@ class <%= pascalEntityName %>Scene extends React.Component {
 
     )
   }
-}
-
-<%= pascalEntityName %>Scene.propTypes = {
 }
 
 export default <%= pascalEntityName %>Scene

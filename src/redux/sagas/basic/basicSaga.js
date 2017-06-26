@@ -1,13 +1,19 @@
 import axios from 'axios'
 import { takeLatest, call, put } from 'redux-saga/effects'
-import { createAction } from 'redux-actions'
+import { createAction, Action } from 'redux-actions'
 
 // Saga action strings
 export const FETCH_BASIC = 'saga/Basic/FETCH_BASIC'
 export const FETCH_BASIC_SUCCESS = 'saga/Basic/FETCH_BASIC_SUCCESS'
 export const FETCH_BASIC_FAILURE = 'saga/Basic/FETCH_BASIC_FAILURE'
 
-export const actionCreators = {
+type BasicSagaActionCreators = {
+  fetchBasic: () => Action<any>,
+  fetchBasicSuccess: (number) => Action<any>,
+  fetchBasicFailure: (object) => Action<any>
+}
+
+export const actionCreators: BasicSagaActionCreators = {
   fetchBasic: createAction(FETCH_BASIC),
   fetchBasicSuccess: createAction(FETCH_BASIC_SUCCESS),
   fetchBasicFailure: createAction(FETCH_BASIC_FAILURE)

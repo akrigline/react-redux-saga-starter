@@ -1,17 +1,21 @@
 import {connect} from 'react-redux'
 import {compose, lifecycle} from 'recompose'
-import DisplayStars from '../../components/displayStars/displayStarsComponent'
-import {actions} from '../../redux/sagas/'
+import DisplayStars, {Values, Callbacks} from '../../components/displayStars/displayStarsComponent'
+import {State} from '../../redux/reducers/'
+import {actions as sagaActions} from '../../redux/sagas/'
+import {actionCreators} from '../../redux/reducers/basicReducer/basicReducerReducer'
 
 // Global State
-export function mapStateToProps (state, props) {
+export function mapStateToProps (state: State, props): Values {
   return {
     starCount: state.basicReducer.count
   }
 }
 // In Object form, each funciton is automatically wrapped in a dispatch
-export const propsMapping = {
-  fetchBasic: actions.basicActions.fetchBasic
+export const propsMapping: Callbacks = {
+  fetchBasic: sagaActions.basicActions.fetchBasic,
+  increment: actionCreators.increment,
+  decrement: actionCreators.decrement
 }
 
 // If you want to use the function mapping

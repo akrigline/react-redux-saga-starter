@@ -1,13 +1,20 @@
+// @flow
 import axios from 'axios'
 import { takeLatest, call, put } from 'redux-saga/effects'
-import { createAction } from 'redux-actions'
+import { createAction, Action } from 'redux-actions'
 
 // Saga action strings
 export const FETCH_STARS = 'saga/<%= pascalEntityName %>/FETCH_STARS'
 export const FETCH_STARS_SUCCESS = 'saga/<%= pascalEntityName %>/FETCH_STARS_SUCCESS'
 export const FETCH_STARS_FAILURE = 'saga/<%= pascalEntityName %>/FETCH_STARS_FAILURE'
 
-export const actionCreators = {
+type <%= pascalEntityName %>SagaActionCreators = {
+  fetchBasic: () => Action<any>,
+  fetchBasicSuccess: (number) => Action<any>,
+  fetchBasicFailure: (object) => Action<any>
+}
+
+export const actionCreators: <%= pascalEntityName %>SagaActionCreators = {
   fetchStars: createAction(FETCH_STARS),
   fetchStarsSuccess: createAction(FETCH_STARS_SUCCESS),
   fetchStarsFailure: createAction(FETCH_STARS_FAILURE)

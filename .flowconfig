@@ -1,0 +1,22 @@
+[ignore]
+.*/blueprints/.*
+.*/src/components/.*/*.story.js
+.*/src/components/.*/*.test.js
+.*/src/containers/.*/*.story.js
+.*/src/containers/.*/*.test.js
+.*/src/scenes/.*/*.story.js
+.*/src/scenes/.*/*.test.js
+.*/src/redux/reducers/.*/*.test.js
+.*/src/redux/sagas/.*/*.test.js
+
+[include]
+.*/src/components/.*/*.js
+.*/src/scenes/.*/*.js
+.*/src/containers/.*/*.js
+.*/src/redux/reducers/.*/*.js
+.*/src/redux/sagas/.*/*.js
+
+[libs]
+
+[options]
+module.name_mapper.extension='scss' -> 'empty/object'

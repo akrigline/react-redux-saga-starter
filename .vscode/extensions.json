@@ -1,0 +1,8 @@
+{
+  "recommendations": [
+    "rtorr.vscode-flow",
+    "dbaeumer.vscode-eslint",
+    "EditorConfig.editorconfig",
+    "dzannotti.vscode-babel-coloring"
+  ]
+}
