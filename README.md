@@ -1,5 +1,22 @@
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app), as such most of the Documentation in the [Create-React-App User Guide](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md) does apply, we've taken some of the documentation we deemed important or different and included it below.
 
+## Features
+
+- [React](https://facebook.github.io/react/)
+- [Redux](http://redux.js.org/)
+- [Redux Saga](https://redux-saga.js.org/)
+- [React Router v4](https://reacttraining.com/react-router/)
+- [Recompose](https://github.com/acdlite/recompose)
+- [Redux Actions](https://github.com/acdlite/redux-actions)
+- [Flow](https://flow.org/)
+- [Axios](https://github.com/mzabriskie/axios)
+- [Storybook](https://storybook.js.org/)
+- [Storyshots](https://github.com/storybooks/storybook/tree/master/addons/storyshots)
+- [Jest](https://facebook.github.io/jest/)
+- [Enzyme](https://github.com/airbnb/enzyme)
+- [SCSS](http://sass-lang.com/)
+- [CSS Modules](https://github.com/css-modules/css-modules)
+- [Webpack](https://webpack.github.io/)
 
 ## Directory Structure
 
@@ -9,11 +26,16 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 │   ├── container                                     # Blue print for container `redux g container <container name>`
 │   ├── saga                                          # Blue print for saga `redux g saga <saga name>`
 │   └── scene                                         # Blue print for scenes `redux g scene <scene name>`
-├── build                                             # Blue print folders
-│   ├── component                                     # Blue print for component `redux g component <component name>`
-│   ├── container                                     # Blue print for container `redux g container <container name>`
-│   ├── saga                                          # Blue print for saga `redux g saga <saga name>`
-│   └── scene                                         # Blue print for scenes `redux g scene <scene name>`
+├── config                                            # Contains config for Webpack, jest, etc, created by ejecting create-react-app
+├── build                                             # Output for build command
+├── public                                            # Contains build-essential non-js files, created by ejecting create-react-app
+│   ├── index.html
+│   ├── favicon.ico
+│   └── manifest.json
+├── scripts                                           # Contains npm scripts for build/start/test, created by ejecting create-react-app
+│   ├── build.js
+│   ├── start.js
+│   └── test.js
 ├── src                                               # app src file
 │   ├── __tests__                                     # root tests folder
 │   │   ├── __snapshots__                             # storyshots snapshots folder
@@ -82,6 +104,11 @@ It correctly bundles React in production mode and optimizes the build for the be
 
 The build is minified and the filenames include the hashes.<br>
 Your app is ready to be deployed!
+
+### `yarn storybook`
+
+Starts Storybook, [more info](#storybook) below.
+Open [http://localhost:6006](http://localhost:6006) to see it in your browser.
 
 ## Changing the Page `<title>`
 
@@ -225,3 +252,9 @@ We enable snapshot testing through the storybook addon: [Storyshots](https://git
 If you use [Visual Studio Code](https://code.visualstudio.com), there is a [Jest extension](https://github.com/orta/vscode-jest) which works with Create React App out of the box. This provides a lot of IDE-like features while using a text editor: showing the status of a test run with potential fail messages inline, starting and stopping the watcher automatically, and offering one-click snapshot updates.
 
 ![VS Code Jest Preview](https://cloud.githubusercontent.com/assets/49038/20795349/a032308a-b7c8-11e6-9b34-7eeac781003f.png)
+
+## Storybook
+
+>React Storybook is a UI development environment for your React components. With it, you can visualize different states of your UI components and develop them interactively.
+
+[Storybook](https://storybook.js.org/) is a way to build and test component in isolation from eachother and from state. Basically it's a component-sandbox environment where you can adjust and solidify individual components without the hassle of finding them in the app itself.
