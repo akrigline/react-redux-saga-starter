@@ -1,4 +1,5 @@
 import React from 'react'
+import styles from './displayStarsComponent.scss'
 
 export type Values = {
   starCount: number
@@ -16,8 +17,8 @@ export default function DisplayStars (props: Props) {
   return (
     <div>
       <p>{props.starCount} Things!</p>
-      <button onClick={() => props.increment(4)}>Increase</button>
-      <button onClick={() => props.decrement(4)}>Increase</button>
+      <button className={styles.button} onClick={() => props.increment(4)}>Increase</button>
+      <button className={styles.button} onClick={() => props.decrement(4)}>Decrease</button>
     </div>
   )
 }
