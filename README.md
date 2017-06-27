@@ -88,30 +88,62 @@ You can find the most recent version of this guide [here](https://github.com/fac
   - [Moment.js locales are missing](#momentjs-locales-are-missing)
 - [Something Missing?](#something-missing)
 
-## Updating to New Releases
+## Directory Structure
 
-Create React App is divided into two packages:
-
-* `create-react-app` is a global command-line utility that you use to create new projects.
-* `react-scripts` is a development dependency in the generated projects (including this one).
-
-You almost never need to update `create-react-app` itself: it delegates all the setup to `react-scripts`.
-
-When you run `create-react-app`, it always creates the project with the latest version of `react-scripts` so you’ll get all the new features and improvements in newly created apps automatically.
-
-To update an existing project to a new version of `react-scripts`, [open the changelog](https://github.com/facebookincubator/create-react-app/blob/master/CHANGELOG.md), find the version you’re currently on (check `package.json` in this folder if you’re not sure), and apply the migration instructions for the newer versions.
-
-In most cases bumping the `react-scripts` version in `package.json` and running `npm install` in this folder should be enough, but it’s good to consult the [changelog](https://github.com/facebookincubator/create-react-app/blob/master/CHANGELOG.md) for potential breaking changes.
-
-We commit to keeping the breaking changes minimal so you can upgrade `react-scripts` painlessly.
-
-## Sending Feedback
-
-We are always open to [your feedback](https://github.com/facebookincubator/create-react-app/issues).
-
-## Folder Structure
-
-After creation, your project should look like this:
+```bash
+├── blueprints                                        # Blue print folders
+│   ├── component                                     # Blue print for component `redux g component <component name>`
+│   ├── container                                     # Blue print for container `redux g container <container name>`
+│   ├── saga                                          # Blue print for saga `redux g saga <saga name>`
+│   └── scene                                         # Blue print for scenes `redux g scene <scene name>`
+├── build                                             # Blue print folders
+│   ├── component                                     # Blue print for component `redux g component <component name>`
+│   ├── container                                     # Blue print for container `redux g container <container name>`
+│   ├── saga                                          # Blue print for saga `redux g saga <saga name>`
+│   └── scene                                         # Blue print for scenes `redux g scene <scene name>`
+├── src                                               # app src file
+│   ├── __tests__                                     # root tests folder
+│   │   ├── __snapshots__                             # storyshots snapshots folder
+│   │   └── storyshots.test.js                        # Initialization for storyshots
+│   ├── assets                                        # Images etc..
+│   ├── components                                    # React Components
+│   │   ├── stories.js                                # exports all stories
+│   │   └── <component name>                          # root folder for component
+│   │       ├── <component name>Component.js          # component file
+│   │       ├── <component name>Component.test.js     # component test file
+│   │       └── <component name>Component.story.js    # component story file
+│   ├── containers                                    # React Components
+│   │   ├── stories.js                                # exports all stories
+│   │   └── <container name>                          # root folder for container
+│   │       ├── <container name>Container.js          # container file
+│   │       ├── <container name>Container.test.js     # container test file
+│   │       └── <container name>Container.story.js    # container story file
+│   ├── redux                                         # Redux files
+│   │   ├── reducers                                  # redux reducers
+│   │   │   ├── index.js                              # combines reducers
+│   │   │   └── <reducer name>                        # root folder for reducer
+│   │   │       ├── <reducer name>Reducer.test.js     # reducer test file
+│   │   │       └── <reducer name>Reducer.js          # reducer file
+│   │   ├── sagas                                     # redux saga files
+│   │   │   ├── index.js                              # combines all sagas
+│   │   │   └── <saga name>                           # Saga container
+│   │   │       ├── <saga name>Saga.test.js           # Saga test file
+│   │   │       └── <saga name>Saga.js                # Saga
+│   │   └── store.js                                  # creates and configures the redux store
+│   ├── scenes                                        # Scenes (maps to routes, similar to views)
+│   │   ├── stories.js                                # Imports and exports all other stories. 
+│   │   └── <scene name>                              # root folder for scene
+│   │       ├── <scene name>Scene.js                  # scene file
+│   │       ├── <scene name>Scene.story.js            # scene story file
+│   │       ├── <scene name>Scene.test.js             # scene test file
+│   ├── services
+│   │   └── <service name>Service
+│   │       ├── <service name>Service.js
+│   │       └── <service name>Service.test.js
+├── storybook                                         # storybook config
+├── package.json                                      # npm package file
+└── yarn.lock                                         # Locks all libraries in place. 
+```
 
 ```
 my-app/
