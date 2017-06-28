@@ -25,14 +25,16 @@ exports[`Storyshots DisplayStars with text 1`] = `
      Things!
   </p>
   <button
+    className={undefined}
     onClick={[Function]}
   >
     Increase
   </button>
   <button
+    className={undefined}
     onClick={[Function]}
   >
-    Increase
+    Decrease
   </button>
 </div>
 `;
@@ -44,14 +46,16 @@ exports[`Storyshots DisplayStarsContainer with stars 1`] = `
      Things!
   </p>
   <button
+    className={undefined}
     onClick={[Function]}
   >
     Increase
   </button>
   <button
+    className={undefined}
     onClick={[Function]}
   >
-    Increase
+    Decrease
   </button>
 </div>
 `;
@@ -67,14 +71,16 @@ exports[`Storyshots Homepage should Render 1`] = `
        Things!
     </p>
     <button
+      className={undefined}
       onClick={[Function]}
     >
       Increase
     </button>
     <button
+      className={undefined}
       onClick={[Function]}
     >
-      Increase
+      Decrease
     </button>
   </div>
 </div>
@@ -106,14 +112,16 @@ exports[`Storyshots Root Scene should Render 1`] = `
          Things!
       </p>
       <button
+        className={undefined}
         onClick={[Function]}
       >
         Increase
       </button>
       <button
+        className={undefined}
         onClick={[Function]}
       >
-        Increase
+        Decrease
       </button>
     </div>
   </div>

@@ -52,6 +52,7 @@
     "object-assign": "4.1.1",
     "postcss-flexbugs-fixes": "3.0.0",
     "postcss-loader": "2.0.5",
+    "pre-commit": "^1.2.2",
     "promise": "7.1.1",
     "react-dev-utils": "^3.0.0",
     "react-error-overlay": "^1.0.7",
@@ -68,6 +69,8 @@
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js --env=jsdom",
+    "coverage": "npm run test -- --coverage",
+    "lint": "./node_modules/eslint/bin/eslint.js --ext .js,.js src",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
@@ -88,6 +91,7 @@
       "build/",
       ".*\\.json",
       "__snapshots__/",
+      "src/__tests__/shoryshots.test.js",
       "stories.js",
       "src/services",
       "story.js",
@@ -121,5 +125,10 @@
   },
   "eslintConfig": {
     "extends": "react-app"
-  }
+  },
+  "pre-commit": [
+    "lint",
+    "test",
+    "coverage"
+  ]
 }

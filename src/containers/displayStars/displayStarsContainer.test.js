@@ -9,13 +9,11 @@ describe('displayStars container', () => {
     const mappedProps = mapStateToProps(state)
     const keys =  Object.keys(mappedProps)
     let errors = []
-    console.log(mappedProps)
     keys.forEach(key => {
       if (mappedProps[key] === undefined) { errors.push(key) }
     })
-    console.log("HEY", keys)
 
-    expect(errors.length).toEqual(4)
+    expect(errors.length).toEqual(0)
   })
   it('should have a propsMapping', () => {
     expect(typeof propsMapping.fetchBasic).toEqual('function')

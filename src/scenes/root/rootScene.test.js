@@ -1,9 +1,11 @@
 import React from 'react'
 import RootScene from './rootScene'
 import {shallow} from 'enzyme'
+import createReduxStore from '../../redux/store'
 
 it('should render', () => {
-  const rootScene = shallow(<RootScene />)
+  const store = createReduxStore();
+  const rootScene = shallow(<RootScene store={store} />)
   expect(rootScene.length).toBe(1)
 })
 

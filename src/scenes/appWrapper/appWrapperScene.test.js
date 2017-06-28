@@ -1,8 +1,8 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import {shallow} from 'enzyme'
 import AppWrapper from './AppWrapperScene';
 
 it('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<AppWrapper />, div);
+  const appWrapperScene = shallow(<AppWrapper />)
+  expect(appWrapperScene.length).toBe(1)
 });
