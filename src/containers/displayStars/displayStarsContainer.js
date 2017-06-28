@@ -29,9 +29,7 @@ export default compose(
   connect(mapStateToProps, propsMapping),
   lifecycle({
     componentDidMount: function() {
-      if (this.props.fetchBasic) {
-        this.props.fetchBasic()
-      }
+      this.props.fetchBasic && this.props.fetchBasic()
     }
   })
 )(DisplayStars)

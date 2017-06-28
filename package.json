@@ -104,7 +104,7 @@
         "lines": 90,
         "statements": 90
       }
-    }
+    },
     "setupFiles": [
       "<rootDir>/config/polyfills.js"
     ],
