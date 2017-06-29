@@ -15,6 +15,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - [Jest](https://facebook.github.io/jest/)
 - [Enzyme](https://github.com/airbnb/enzyme)
 - [SCSS](http://sass-lang.com/)
+- [Sass Resources Loader](https://github.com/shakacode/sass-resources-loader)
 - [CSS Modules](https://github.com/css-modules/css-modules)
 - [Webpack](https://webpack.github.io/)
 
@@ -75,6 +76,10 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 │   │   └── <service name>Service
 │   │       ├── <service name>Service.js
 │   │       └── <service name>Service.test.js
+│   ├── style
+│   │   ├── resources                                 # all mixins and variables should be in this folder
+│   │   │   ├── _variables.scss                       # all scss variables
+│   │   └── main.scss                                 # main.scss has all global styles applied directly the html page.
 ├── storybook                                         # storybook config
 ├── package.json                                      # npm package file
 └── yarn.lock                                         # Locks all libraries in place. 
@@ -120,7 +125,7 @@ If you need to dynamically update the page title based on the content, you can u
 
 ## Adding a Stylesheet
 
-This project uses a Webpack setup that enables SCSS files to be used as CSS Modules.
+This project uses a Webpack setup that enables SCSS files to be used as CSS Modules. It also incorporates [sass resource loader](https://github.com/shakacode/sass-resources-loader), so you don't have to import global variable files into each stylesheet. Simply keep your global sass files in `/src/style/resources` and webpack will do the rest.
 
 ### `Button.scss`
 

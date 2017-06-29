@@ -218,7 +218,13 @@ module.exports = {
                     sourceMap: true,
                     sourceMapContents: true
                   }
-                }
+                },
+                {
+                  loader: require.resolve('sass-resources-loader'),
+                  options: {
+                    resources: './src/style/resources/*.scss'
+                  },
+                },
               ],
             },
             extractTextPluginOptions

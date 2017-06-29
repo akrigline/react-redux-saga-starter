@@ -181,7 +181,7 @@ module.exports = {
             loader: require.resolve('css-loader'),
             options: {
               modules: true,
-              importLoaders: 2,
+              importLoaders: 3,
               sourceMap: true,
               localIdentName: '[local]___[hash:base64:5]'
             }
@@ -205,47 +205,15 @@ module.exports = {
               outputStyle: 'expanded',
               sourceMap: true
             }
+          },
+          {
+            loader: require.resolve('sass-resources-loader'),
+            options: {
+              resources: './src/style/resources/*.scss'
+            },
           }
         ]
-        // From react-redux-universal
-        // loader: 'style!css?modules&importLoaders=2&sourceMap&localIdentName=[local]___[hash:base64:5]!postcss-loader!sass?outputStyle=expanded&sourceMap'
       },
-
-      // "postcss" loader applies autoprefixer to our CSS.
-      // "css" loader resolves paths in CSS and adds assets as dependencies.
-      // "style" loader turns CSS into JS modules that inject <style> tags.
-      // In production, we use a plugin to extract that CSS to a file, but
-      // in development "style" loader enables hot editing of CSS.
-      // {
-      //   test: /\.css$/,
-      //   use: [
-      //     require.resolve('style-loader'),
-      //     {
-      //       loader: require.resolve('css-loader'),
-      //       options: {
-      //         importLoaders: 1,
-      //       },
-      //     },
-      //     {
-      //       loader: require.resolve('postcss-loader'),
-      //       options: {
-      //         ident: 'postcss', // https://webpack.js.org/guides/migrating/#complex-options
-      //         plugins: () => [
-      //           require('postcss-flexbugs-fixes'),
-      //           autoprefixer({
-      //             browsers: [
-      //               '>1%',
-      //               'last 4 versions',
-      //               'Firefox ESR',
-      //               'not ie < 9', // React doesn't support IE8 anyway
-      //             ],
-      //             flexbox: 'no-2009',
-      //           }),
-      //         ],
-      //       },
-      //     },
-      //   ],
-      // },
       // ** STOP ** Are you adding a new loader?
       // Remember to add the new extension(s) to the "file" loader exclusion list.
     ],
