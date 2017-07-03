@@ -263,3 +263,7 @@ If you use [Visual Studio Code](https://code.visualstudio.com), there is a [Jest
 >React Storybook is a UI development environment for your React components. With it, you can visualize different states of your UI components and develop them interactively.
 
 [Storybook](https://storybook.js.org/) is a way to build and test component in isolation from eachother and from state. Basically it's a component-sandbox environment where you can adjust and solidify individual components without the hassle of finding them in the app itself.
+
+## Code Splitting
+
+We use component Splitting via Route which is set up in `src/scenes/root/rootScene` and uses [`react-loadable`](https://github.com/thejameskyle/react-loadable).
