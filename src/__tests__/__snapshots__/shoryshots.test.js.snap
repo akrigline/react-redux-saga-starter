@@ -102,28 +102,5 @@ exports[`Storyshots Root Scene should Render 1`] = `
       Welcome to React
     </h2>
   </div>
-  <div>
-    <h1>
-      This is the Homepage
-    </h1>
-    <div>
-      <p>
-        0
-         Things!
-      </p>
-      <button
-        className={undefined}
-        onClick={[Function]}
-      >
-        Increase
-      </button>
-      <button
-        className={undefined}
-        onClick={[Function]}
-      >
-        Decrease
-      </button>
-    </div>
-  </div>
 </div>
 `;
