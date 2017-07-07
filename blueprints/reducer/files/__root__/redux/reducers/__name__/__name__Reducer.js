@@ -11,20 +11,20 @@ export const actions = {
 
 // createAction is a lib for creating FSAs
 // see https://github.com/acdlite/flux-standard-action, for info in the flux standard action
-type <%= PascalEntityName %>ActionCreators = {
+type <%= pascalEntityName %>ActionCreators = {
   increment: (number) => Action<number>,
   decrement: (number) => Action<number>
 }
 
-export const actionCreators: <%= PascalEntityName %>ActionCreators = {
+export const actionCreators: <%= pascalEntityName %>ActionCreators = {
   increment: createAction(INCREMENT),
   decrement: createAction(DECREMENT)
 }
 
-export type <%= PascalEntityName %>State = {
+export type <%= pascalEntityName %>State = {
   count: number
 }
-export const initialState: <%= PascalEntityName %>State = {
+export const initialState: <%= pascalEntityName %>State = {
   count: 0
 }
 

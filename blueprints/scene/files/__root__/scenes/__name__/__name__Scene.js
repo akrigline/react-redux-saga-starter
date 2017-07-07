@@ -1,4 +1,3 @@
-// @flow
 import React from 'react'
 
 class <%= pascalEntityName %>Scene extends React.Component {
@@ -10,7 +9,7 @@ class <%= pascalEntityName %>Scene extends React.Component {
     return (
       
         <div>
-
+          Things!
         </div>
 
     )
