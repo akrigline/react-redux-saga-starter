@@ -2,18 +2,15 @@ import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { Provider } from 'react-redux'
 import createReduxStore from '../../redux/store'
-import AppWrapper from './appWrapperScene'
+import HomePage from './homePageRoute'
 
 const reduxStore = createReduxStore()
 
-const provider = (storyFn) => (
+const provider = storyFn =>
   <Provider store={reduxStore}>
-    { storyFn() }
+    {storyFn()}
   </Provider>
-)
 
-storiesOf('App Wrapper', module)
+storiesOf('Homepage', module)
   .addDecorator(provider)
-  .add('should Render', () => (
-    <AppWrapper />
-  ))
+  .add('should Render', () => <HomePage />)

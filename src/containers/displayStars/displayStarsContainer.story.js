@@ -4,12 +4,11 @@ import { Provider } from 'react-redux'
 import createReduxStore from '../../redux/store'
 import DisplayStars from './displayStarsContainer'
 
-storiesOf('DisplayStarsContainer', module)
-  .add('with stars', () => {
-    const reduxStore = createReduxStore()
-    return (
-      <Provider store={reduxStore}>
-        <DisplayStars />
-      </Provider>
-    )
-  })
+storiesOf('DisplayStarsContainer', module).add('with stars', () => {
+  const reduxStore = createReduxStore()
+  return (
+    <Provider store={reduxStore}>
+      <DisplayStars />
+    </Provider>
+  )
+})

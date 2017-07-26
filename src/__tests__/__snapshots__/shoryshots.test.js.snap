@@ -85,22 +85,3 @@ exports[`Storyshots Homepage should Render 1`] = `
   </div>
 </div>
 `;
-
-exports[`Storyshots Root Scene should Render 1`] = `
-<div
-  className={undefined}
->
-  <div
-    className={undefined}
-  >
-    <img
-      alt="logo"
-      className={undefined}
-      src="logo.svg"
-    />
-    <h2>
-      Welcome to React
-    </h2>
-  </div>
-</div>
-`;

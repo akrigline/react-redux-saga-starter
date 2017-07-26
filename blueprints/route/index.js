@@ -25,6 +25,9 @@ module.exports = {
   // before and after install hooks
   beforeInstall: function (options) {},
   afterInstall: function (options) {
-    fs.appendFileSync(path.join(__dirname, '../../src/scenes/stories.js'), `import './${options.entity.name}/${options.entity.name}Scene.story'\n`)
+    fs.appendFileSync(
+      path.join(__dirname, '../../src/scenes/stories.js'),
+      `import './${options.entity.name}/${options.entity.name}Route.story'\n`
+    )
   }
 }
