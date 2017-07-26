@@ -1,12 +1,11 @@
 import React from 'react'
-import HomePageScene from './homePageScene'
-import {shallow} from 'enzyme'
+import HomePageRoute from './homePageRoute'
+import { shallow } from 'enzyme'
 
 it('should render', () => {
-  const homePageScene = shallow(<HomePageScene />)
-  expect(homePageScene.length).toBe(1)
+  const homePageRoute = shallow(<HomePageRoute />)
+  expect(homePageRoute.length).toBe(1)
 })
-
 
 // You could use something like this to test onClick handlers
 // it('should call trigger stars naviation', () => {

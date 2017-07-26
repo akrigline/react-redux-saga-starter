@@ -9,8 +9,8 @@ export const FETCH_BASIC_FAILURE = 'saga/Basic/FETCH_BASIC_FAILURE'
 
 type BasicSagaActionCreators = {
   fetchBasic: () => Action<any>,
-  fetchBasicSuccess: (number) => Action<any>,
-  fetchBasicFailure: (object) => Action<any>
+  fetchBasicSuccess: number => Action<any>,
+  fetchBasicFailure: object => Action<any>
 }
 
 export const actionCreators: BasicSagaActionCreators = {
@@ -25,10 +25,12 @@ export default function * watchBasic () {
 
 export function * getBasic (action) {
   try {
-    const repoInfo = yield call(axios.get, 'https://api.github.com/repos/akrigline/react-redux-saga-starter')
+    const repoInfo = yield call(
+      axios.get,
+      'https://api.github.com/repos/akrigline/react-redux-saga-starter'
+    )
     yield put(actionCreators.fetchBasicSuccess(repoInfo.data.stargazers_count))
   } catch (error) {
     yield put(actionCreators.fetchBasicFailure(error))
   }
 }
-

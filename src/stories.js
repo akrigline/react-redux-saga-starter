@@ -1,4 +1,3 @@
-
-import './scenes/stories'
+import './routes/stories'
 import './containers/stories'
 import './components/stories'

@@ -1,14 +1,13 @@
 import React from 'react'
-import RootScene from './rootScene'
-import {shallow} from 'enzyme'
+import RootRoute from './rootRoute'
+import { shallow } from 'enzyme'
 import createReduxStore from '../../redux/store'
 
 it('should render', () => {
-  const store = createReduxStore();
-  const rootScene = shallow(<RootScene store={store} />)
-  expect(rootScene.length).toBe(1)
+  const store = createReduxStore()
+  const rootRoute = shallow(<RootRoute store={store} />)
+  expect(rootRoute.length).toBe(1)
 })
-
 
 // You could use something like this to test onClick handlers
 // it('should call trigger stars naviation', () => {
