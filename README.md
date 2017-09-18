@@ -1,4 +1,4 @@
-UT Map My Grad
+React Redux Saga Starter
 ===
 
 ## Introduction
