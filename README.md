@@ -38,7 +38,6 @@ This project has a `.vscode` directory that will suggest extensions for VSCode w
 - [EditorConfig](http://editorconfig.org/) - Community project to standardize how we standardize our editor configurations. This project has a `.editorConfig` file and if your editor has an [editor config extension](https://github.com/editorconfig/), this will greatly help keep things standard.
 - ESlint - Puts linting suggestions into the IDE. [Atom ESlint](https://atom.io/packages/linter-eslint)
 - Babel support - Syntax highlighting and autocompletion for all versions of javascript. [Atom Babel plugin](https://atom.io/packages/language-babel)
-- Flow support - Enables the type checking features (autocomplete, etc) in the IDE. The Babel plugin might accomplish this, but if not, [Atom Flow](https://atom.io/packages/flow-ide) looks good.
 - Jest support - VSCode has an extension that runs the Jest Tests while you work and enables some debugging features that are nice. Totally unecessary as the command line will do all of this for you, but it might be nice to have if your editor has something similar.
 
 ## Directory Structure
@@ -180,10 +179,6 @@ Recompose is a toolbelt to enhance the creation of functional React components.
 ### [Redux Actions](https://github.com/acdlite/redux-actions)
 
 Makes creating reducers simpler, providing a "flux-standard" action utility belt. Basically cuts down on the amount of code you have to write by hand in a reducer by filling in the standard code.
-
-### [Flow](https://flow.org/)
-
-Static Type Checking for javascript. Helps you catch issues before they occur, but isn't as strict about it's implementation as Typescript propper.
 
 ### [Axios](https://github.com/mzabriskie/axios)
 
