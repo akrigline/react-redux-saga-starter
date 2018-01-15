@@ -1,7 +1,7 @@
 import {connect} from 'react-redux'
 // For Lifecycle composing
 // import {compose, lifecycle} from 'recompose'
-import <%= pascalEntityName %>, {Values, Callbacks} from '../../components/<%= camelEntityName %>/<%= camelEntityName %>Component'
+import <%= pascalEntityName %>, {Callbacks} from '../../components/<%= camelEntityName %>/<%= camelEntityName %>Component'
 import {actions as sagaActions} from '../../redux/sagas/'
 import {actionCreators} from '../../redux/reducers/basicReducer/basicReducerReducer'
 
