@@ -1,15 +1,11 @@
 import { connect } from 'react-redux'
 import { compose, lifecycle } from 'recompose'
-import DisplayStars, {
-  Values,
-  Callbacks
-} from '../../components/displayStars/displayStarsComponent'
-import { State } from '../../redux/reducers/'
+import DisplayStars from '../../components/displayStars/displayStarsComponent'
 import { actions as sagaActions } from '../../redux/sagas/'
 import { actionCreators } from '../../redux/reducers/basicReducer/basicReducerReducer'
 
 // Global State
-export function mapStateToProps (state: State, props): Values {
+export function mapStateToProps (state, props) {
   return {
     starCount: state.basicReducer.count
   }

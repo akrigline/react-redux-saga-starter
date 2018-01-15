@@ -1,13 +1,6 @@
 import React from 'react'
 
-export type Values = {
-}
-
-export type Callbacks = {
-}
-
-type Props = Values & Callbacks
-export default function <%= pascalEntityName %> (props: Props) {
+export default function <%= pascalEntityName %> (props) {
   return (
     <div>
       <p>Things!</p>
