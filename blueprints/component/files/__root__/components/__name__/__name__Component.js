@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function <%= pascalEntityName %> (props: Props) {
+export default function <%= pascalEntityName %> (props) {
   return (
     <div>
       <p>Things!</p>

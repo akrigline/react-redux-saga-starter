@@ -1,19 +1,8 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import styles from './displayStarsComponent.scss'
 
-export type Values = {
-  starCount: number
-}
-
-export type Callbacks = {
-  increment: number => any,
-  decrement: number => any,
-  fetchBasic: () => any
-}
-
-type Props = Values & Callbacks
-
-export default function DisplayStars (props: Props) {
+export default function DisplayStars (props) {
   return (
     <div>
       <p>
@@ -27,4 +16,10 @@ export default function DisplayStars (props: Props) {
       </button>
     </div>
   )
+}
+
+DisplayStars.propTypes = {
+  starCount: PropTypes.string,
+  increment: PropTypes.func,
+  decrement: PropTypes.func
 }
